@@ -1,15 +1,18 @@
 <template>
+
 <div>
+  <h1>Claim Request Content form</h1>
 <el-dialog
   title="Tips"
   :visible.sync="dialogVisible"
   width="30%">
   
-  <p> First Name:{{ ruleForm.Firstname }}</p>
-   <p> First Name:{{ ruleForm.Lastname }}</p>
+  <p> First Name:{{ ruleForm.FirstName }}</p>
+   <p> First Name:{{ ruleForm.LastName }}</p>
     <p> Emial:{{ ruleForm.Email }}</p>
     <p> SubjectTitle:{{ ruleForm.SubjectTitle }}</p>
-    <p>Claim Request Content form: {{ ruleForm.desc ? "true" :""}}</p>
+    <p>Claim Description: {{ ruleForm.desc}}</p>
+    <p>Claim Request Content form: true</p>
     
   <span>This is a message</span>
 
@@ -37,12 +40,12 @@
     <el-form-item label="Claim Request Content form" prop="desc">
       <el-input type="textarea" v-model="ruleForm.desc"></el-input>
     </el-form-item>
-    <el-form-item label="Activity type" prop="type">
-      <el-checkbox v-model="ruleForm.type">Option</el-checkbox>
+    <el-form-item label="" prop="type">
+      <el-checkbox v-model="ruleForm.type">Agreement</el-checkbox>
     </el-form-item>
     <el-form-item>
       <el-button type="primary" @click="submitForm('ruleForm')">Create</el-button>
-      <el-button @click="resetForm('ruleForm')">Reset</el-button>
+
     </el-form-item>
   </el-form>
   </div>
@@ -136,7 +139,7 @@ export default {
     
       this.$refs[formName].validate(valid => {
         if (valid) {
-           this.dialogVisible = false;
+           this.dialogVisible = true;
          
         } else {
           console.log("error submit!!");
