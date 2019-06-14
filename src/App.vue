@@ -1,17 +1,26 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- <img src="./assets/logo.png">
+    <div>
+      <p>
+        If Element is successfully added to this project, you'll see an
+        <code v-text="'<el-button>'"></code>
+        below
+      </p>
+      <el-button>el-button</el-button>
+    </div>-->
+    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/>  -->
+    <!-- <Assignment /> -->
+   <Requestform />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Requestform from './components/Test.vue'
 export default {
   name: 'app',
   components: {
-    HelloWorld
+   Requestform
   }
 }
 </script>
